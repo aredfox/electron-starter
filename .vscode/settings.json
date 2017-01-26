@@ -1,0 +1,40 @@
+{
+    "typescript.check.tscVersion": false,       
+    "vsicons.presets.angular": false,
+    "psi-header.config": {
+        "forceToTop": true,
+        "blankLinesAfter": 2
+    },
+    "psi-header.variables": [
+        ["company", "Delegate-IT.be"],
+        ["author", "Yves Schelpe"],
+        ["email", "ys@delegate-it.be"]
+    ],
+    "psi-header.lang-config": [
+        {
+            "language": "javascript",
+            "begin": "/***************************************************************************",
+            "prefix": " * ",
+            "end": " ***************************************************************************/",
+            "blankLinesAfter": 1
+        },
+        {
+            "language": "typescript",
+            "mapTo": "javascript"
+        },
+        {
+            "language": "jsx",
+            "mapTo": "javascript"
+        }
+    ],
+    "psi-header.templates": [
+        {
+            "language": "*",
+            "template": [                
+                "Created by <<author>> (<<email>>) for <<company>>",
+                "        at <<date>> <<time>>",
+                "Copyright (c) <<year>> <<company>>"                
+            ]
+        }
+    ]    
+}

@@ -1,0 +1,29 @@
+{
+  "name": "electron-starter",
+  "version": "0.0.1",
+  "description": "Opinionated electron.atom.io boilerplate / template.",
+  "main": "main.js",
+  "scripts": {},
+  "author": "Yves Schelpe (yves.schelpe@kdg.be)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.22.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-javascript-obfuscator": "^1.1.2",
+    "gulp-require-tasks": "^1.0.5",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-typescript": "^3.1.4",
+    "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
+    "load-plugins": "^2.1.2",
+    "run-sequence": "^1.2.2",
+    "typescript": "^2.1.5",
+    "yargs": "^6.6.0"
+  }
+}
