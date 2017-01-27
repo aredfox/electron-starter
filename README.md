@@ -1,6 +1,28 @@
 # electron-gulp-ts-less-react
 Opinionated [electron](https://electron.atom.io) boilerplate / template working with gulp, typescript, less, react and [VSCode](https://code.visualstudio.com/)
 
+## Get Started
+1. Make sure you have installed NodeJS and NPM globally on your machine. You can get it at [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
+2. Via NPM you install both gulp and typescript globally with the following command `npm i -g gulp typescript` in your terminal or command prompt.
+3. Next run the command `npm install` to let NPM install the dependencies defined in `project.json`'s `devDependencies` and `dependencies` section in a local folder called `node_modules`.
+4. In your terminal / command prompt enter the command `gulp`. You should see the tasks defined, something along the lines of the output below:
+   ```
+   [10:02:03] Using gulpfile e:\Dev\electron-starter\gulpfile.js
+   [10:02:03] Starting 'default'...
+   [10:02:03] Finished 'default' after 28 ms
+   [10:02:05] Tasks for e:\Dev\electron-starter\gulpfile.js
+   [10:02:05] ├─┬ build
+   [10:02:05] │ └── build:clean
+   [10:02:05] ├── build:clean
+   [10:02:05] ├─┬ debug
+   [10:02:05] │ ├── debug:config
+   [10:02:05] │ └── debug:plugins
+   [10:02:05] ├── debug:config
+   [10:02:05] ├── debug:plugins
+   [10:02:05] ├── default
+   [10:02:05] └── js:typescript
+   ```
+
 ## Gulp
 This project uses [gulp](http://gulpjs.com/) as the task-runner for managing the build process. By making use of the [gulp-require-tasks](https://www.npmjs.com/package/gulp-require-tasks) module, we're able to load the gulp tasks from the folder './gulp/tasks'. We use [load-plugins](https://www.npmjs.com/package/load-plugins) to automatically make plugins available inside the tasks.
 Below is an outline of a task's structure:
