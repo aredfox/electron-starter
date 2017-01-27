@@ -29,6 +29,7 @@ module.exports = args => {
             source: {
                 base: path.resolve("./src"),
                 typescript: path.join(path.resolve("./src/"), "**", "/*.ts"),
+                less: path.join(path.resolve('./src/'), '**', '/*.less'),
                 vendors: [
                     {
                         name: 'font-awesome',
@@ -39,6 +40,8 @@ module.exports = args => {
             },            
             destination: {                
                 base: path.resolve("./app"),
+                views: path.resolve("./app/views/"),
+                styles: path.resolve("./app/views/styles"),
                 lib: path.resolve("./app/lib"),
                 vendor: path.resolve("./app/lib/vendor")
             }

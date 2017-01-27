@@ -4,7 +4,7 @@
  * Copyright (c) 2017 Delegate-IT.be
  ***************************************************************************/
 
-// Task that copies over vendo specified modules/libraries and more to
+// Task that copies over vendor specified modules/libraries and more to
 // the vendor path defined in the config.paths.destination
 
 module.exports = {

@@ -7,5 +7,5 @@
 // Task that runs the build cycle.
 
 module.exports = {
-    dep: ['build:clean']    
+    dep: ['clean']    
 };
