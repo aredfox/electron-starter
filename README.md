@@ -43,6 +43,10 @@ module.exports = {
 };
 ```
 
+## Less
+I've chosen [less](http://lesscss.org/), but you could easily replace it with sass if you chose to do so. The task gulp task "css:less" will compile all "*.less" files and bundle them into one "stylesheet.css.min" file in the output "app/views/styles" folder.
+Autoprefixing is enabled via [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) and is configured for 'last 2 Chrome versions'.
+
 ## FontAwesome
 [Font Awesome](http://fontawesome.io/) because it's a free, high-quality tool for integrating icons inside your html. It's provied by default in `package.json` and in the build procedure of `gulp`.
 
