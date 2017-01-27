@@ -29,9 +29,18 @@ module.exports = args => {
             source: {
                 base: path.resolve("./src"),
                 typescript: path.join(path.resolve("./src/"), "**", "/*.ts"),
-            },
+                vendors: [
+                    {
+                        name: 'font-awesome',
+                        path: path.resolve('./node_modules/font-awesome'),
+                        glob: path.resolve('./node_modules/font-awesome/**/*{.min.css,otf,eot,svg,ttf,woff,woff2}')                        
+                    }
+                ]
+            },            
             destination: {                
-                base: path.resolve("./app")                
+                base: path.resolve("./app"),
+                lib: path.resolve("./app/lib"),
+                vendor: path.resolve("./app/lib/vendor")
             }
         }
     }
