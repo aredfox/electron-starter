@@ -6,6 +6,7 @@ Opinionated [electron](https://electron.atom.io) boilerplate / template working 
 2. Via NPM you install both gulp and typescript globally with the following command `npm i -g gulp typescript` in your terminal or command prompt.
 3. Next run the command `npm install` to let NPM install the dependencies defined in `project.json`'s `devDependencies` and `dependencies` section in a local folder called `node_modules`.
 4. In your terminal / command prompt enter the command `gulp`. You should see the tasks defined, something along the lines of the output below:
+
    ```
    [10:02:03] Using gulpfile e:\Dev\electron-starter\gulpfile.js
    [10:02:03] Starting 'default'...
