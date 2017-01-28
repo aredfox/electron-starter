@@ -12,6 +12,25 @@
     "type": "git",
     "url": "https://github.com/aredfox/electron-starter"
   },
+  "build": {
+    "appId": "electron-starter",
+    "productName": "electron-starter",
+    "category": "public.app-category.education",
+    "copyright": "Copyright © {year} Delegate-IT.be",
+    "mac": {
+      "category": "public.app-category.education",
+      "icon": "resources/build/icon.icns"
+    },
+    "win": {
+      "icon": "resources/build/icon.ico"
+    },
+    "linux": {}
+  },
+  "directories": {
+    "output": "dist",
+    "buildResources": "resources",
+    "app": "app"
+  },
   "dependencies": {
     "dot-object": "^1.5.4",
     "react": "^15.4.2",
@@ -29,6 +48,7 @@
     "babel-preset-react": "^6.22.0",
     "del": "^2.2.2",
     "electron": "^1.4.15",
+    "electron-builder": "^11.7.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
