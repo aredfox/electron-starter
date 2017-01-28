@@ -4,8 +4,6 @@
  * Copyright (c) 2017 Delegate-IT.be
  */
 
-/// <reference path="../../../typings/index.d.ts" />
-
 // Top level application component
 
 /*------------------------------------------------------------------------------------*/
