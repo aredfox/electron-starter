@@ -24,6 +24,12 @@ This is a highly opinionated [electron](https://electron.atom.io) boilerplate / 
    [10:02:05] └── js:typescript
    ```
 
+## Build Options
+### Flags
+- `--prod` will signal the application it is being compiled for production. You can base your code upon this flag to show/hide certain features.
+- `--obfuscate` will **turn off** obfuscation (as default it is on) of the typescript code as done by [javascript-obfuscator](https://www.npmjs.com/package/gulp-javascript-obfuscator).
+- `--uglify` will **turn off** minifaction of javascript as done by [UfligyJS](https://www.npmjs.com/package/gulp-uglify).
+
 # Dependencies
 We've chosen a few dependencies we like working with, but for the most part they're interchangable with alternatives out there.
 
