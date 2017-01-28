@@ -9,7 +9,8 @@
 module.exports = {
     dep: [],
     fn: function (gulp, callback, plugins) {        
-        gulp.src(plugins.config.paths.source.html)
+        return gulp
+            .src(plugins.config.paths.source.html)
             .pipe(gulp.dest(plugins.config.paths.destination.base));
     }
 };
