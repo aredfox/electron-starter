@@ -18,11 +18,6 @@
         "sourceMap": true,
         "inlineSources": true,
         "allowSyntheticDefaultImports": true,
-        "jsx": "react",
-        "baseUrl": "types",
-        "typeRoots": [
-            "../typings",
-            "types"
-        ]
+        "jsx": "react"        
     }
 }

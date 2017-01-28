@@ -4,9 +4,6 @@
  * Copyright (c) 2017 Delegate-IT.be
  */
 
-/// <reference path="../../typings/index.d.ts" />
-/// <reference path="interfaces.d.ts" />
-
 // Setting up react inside the host html
 
 /*------------------------------------------------------------------------------------*/
