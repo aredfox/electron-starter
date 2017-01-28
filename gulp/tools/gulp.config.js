@@ -21,6 +21,13 @@ module.exports = args => {
     return {
         // Environment
         env: buildEnvironmentObject(args),
+        // Compilation
+        compilation: {
+            js: {
+                uglify: !args.uglify,
+                obfuscate: !args.obfuscate
+            }
+        },
         // Paths
         paths: {
             base: path.resolve("./"),
