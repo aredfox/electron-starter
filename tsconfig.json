@@ -19,8 +19,10 @@
         "inlineSources": true,
         "allowSyntheticDefaultImports": true,
         "jsx": "react",
+        "baseUrl": "types",
         "typeRoots": [
-            "../typings"
+            "../typings",
+            "types"
         ]
     }
 }
