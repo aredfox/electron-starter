@@ -23,13 +23,13 @@ export default class App {
     static BrowserWindow: any;
 
     // Main method (entry point for main.ts)
-    static main(app: Electron.App, browserWindow: typeof BrowserWindow) {        
+    static main(app: Electron.App, browserWindow: typeof BrowserWindow): void {        
         App.application = app;                
         App.configureAppEvents();
     }
 
     // Private static methods
-    private static configureAppEvents() {
+    private static configureAppEvents(): void {
         // Quit application (even on macOS) when all windows are closed.
         App.application.on(
             'window-all-closed',
@@ -56,7 +56,7 @@ export default class App {
     }
 
     // Creates a new "Main" browser window
-    private static createMainBrowserWindow() {
+    private static createMainBrowserWindow(): Electron.BrowserWindow {
         const mainBrowserWindow = new BrowserWindow({
             width: 800, height: 600,            
             show: false, backgroundColor: '#111',
