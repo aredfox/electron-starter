@@ -13,10 +13,12 @@
     "url": "https://github.com/aredfox/electron-starter"
   },
   "dependencies": {
+    "dot-object": "^1.5.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "@types/dot-object": "^1.4.6",
     "@types/electron": "^1.4.31",
     "@types/node": "^7.0.4",
     "@types/react": "^15.0.4",
