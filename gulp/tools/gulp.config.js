@@ -30,6 +30,7 @@ module.exports = args => {
                 base: path.resolve("./src"),
                 typescript: path.join(path.resolve("./src/"), "**", "/*.ts"),
                 less: path.join(path.resolve('./src/'), '**', '/*.less'),
+                html: path.join(path.resolve('./src/'), '**', '*.{html,htm}'),
                 vendors: [
                     {
                         name: 'font-awesome',
