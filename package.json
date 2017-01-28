@@ -19,16 +19,16 @@
     "copyright": "Copyright © {year} Delegate-IT.be",
     "mac": {
       "category": "public.app-category.education",
-      "icon": "resources/build/icon.icns"
+      "icon": "src/data/build/icon.icns"
     },
     "win": {
-      "icon": "resources/build/icon.ico"
+      "icon": "src/data/build/icon.ico"
     },
     "linux": {}
   },
   "directories": {
     "output": "dist",
-    "buildResources": "resources",
+    "buildResources": "src/data/build",
     "app": "app"
   },
   "dependencies": {

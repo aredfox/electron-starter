@@ -29,12 +29,18 @@ module.exports = args => {
             }
         },
         // Paths
-        paths: {
+        paths: {            
             base: path.resolve("./"),
             packagejson: path.resolve("./package.json"),
-            tsconfigjson: path.resolve("./tsconfig.json"),
+            tsconfigjson: path.resolve("./tsconfig.json"),            
+            build: {
+                    icons: { 
+                        source: path.resolve(`./resources/build/${args.prod ? 'prod' : 'dev'}/*.{png,icns,ico}`),
+                        destination: path.resolve('./src/data/build')
+                    }
+            },
             source: {
-                base: path.resolve("./src"),
+                base: path.resolve("./src"),                
                 typescript: path.join(path.resolve("./src/"), "**", "/*.ts"),
                 less: path.join(path.resolve('./src/'), '**', '/*.less'),
                 html: path.join(path.resolve('./src/'), '**', '*.{html,htm}'),

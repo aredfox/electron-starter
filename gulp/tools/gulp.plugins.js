@@ -23,6 +23,7 @@ module.exports = config => {
 // Add additional plugins
 function addPlugins(plugins) {
     plugins.del = require('del');
+    plugins.path = require('path');
     return plugins;
 }
 /*------------------------------------------------------------------------------------*/
