@@ -18,6 +18,6 @@
         "sourceMap": true,
         "inlineSources": true,
         "allowSyntheticDefaultImports": true,
-        "jsx": "react"        
+        "jsx": "react"
     }
 }
