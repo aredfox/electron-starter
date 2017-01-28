@@ -2,8 +2,10 @@
   "name": "electron-starter",
   "version": "0.0.1",
   "description": "Opinionated electron.atom.io boilerplate / template.",
-  "main": "main.js",
-  "scripts": {},
+  "main": "./app/main",
+  "scripts": {
+    "start": "electron ./app/main"
+  },
   "author": "Yves Schelpe (yves.schelpe@kdg.be)",
   "license": "MIT",
   "repository": {
