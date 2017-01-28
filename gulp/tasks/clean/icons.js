@@ -9,7 +9,7 @@
 module.exports = {
     dep: [],
     fn: function (gulp, callback, plugins) {                
-        return plugins.del.sync([
+        plugins.del.sync([
             plugins.path.resolve(plugins.path.join(plugins.config.paths.build.icons.destination, 'icon.*'))            
         ]);        
     }

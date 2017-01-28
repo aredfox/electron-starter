@@ -24,6 +24,7 @@ module.exports = config => {
 function addPlugins(plugins) {
     plugins.del = require('del');
     plugins.path = require('path');
+    plugins.runSequence = require('run-sequence');
     return plugins;
 }
 /*------------------------------------------------------------------------------------*/
