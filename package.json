@@ -1,10 +1,11 @@
 {
   "name": "electron-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Opinionated electron.atom.io boilerplate / template.",
   "main": "./app/main",
   "scripts": {
-    "start": "electron ./app/main"
+    "start": "electron ./app/main",
+    "dev": "gulp clean && gulp build --dev && electron ./app/main"
   },
   "author": "Yves Schelpe (ys@delegate-it.be)",
   "license": "MIT",

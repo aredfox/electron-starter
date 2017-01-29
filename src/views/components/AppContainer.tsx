@@ -10,6 +10,7 @@
 /** IMPORTS **/
 import * as React from 'react';
 import { Component } from 'react';
+import Config from '../../lib/misc/Config';
 /*------------------------------------------------------------------------------------*/
 /*///*/
 
@@ -17,7 +18,11 @@ import { Component } from 'react';
 /** COMPONENT **/
 export default class AppContainer extends React.Component<{}, {}> {    
     render() {
-        return ( <div /> );
+        return ( 
+            <div>
+                <p>Running electron-starter version '{Config.Instance.getVersion()}'.</p>
+            </div>
+        );
     }    
 }        
 /*------------------------------------------------------------------------------------*/

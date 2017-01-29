@@ -6,6 +6,12 @@
 
 // Task that runs the full clean cycle.
 
-module.exports = {
-    dep: ['clean:icons', 'clean:compilation']
+module.exports = {    
+    fn: function(gulp, plugins, callback) {
+        plugins.runSequence(
+            'clean:icons',
+            'clean:compilation',
+            callback
+        );
+    }
 };

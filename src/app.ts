@@ -59,7 +59,7 @@ export default class App {
     private static createMainBrowserWindow(): Electron.BrowserWindow {
         const mainBrowserWindow = new BrowserWindow({
             width: 800, height: 600,            
-            show: false, backgroundColor: '#111',
+            show: false, backgroundColor: '#efefef',
             webPreferences: {
                 webSecurity: false
             }
