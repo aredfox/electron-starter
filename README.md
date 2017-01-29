@@ -1,5 +1,15 @@
 # About "electron-starter"
-This is a highly opinionated [electron](https://electron.atom.io) boilerplate / template working with gulp, typescript, less, react and [VSCode](https://code.visualstudio.com/)
+This is a highly opinionated [electron](https://electron.atom.io) boilerplate / template working with gulp, typescript, less, react and [VSCode](https://code.visualstudio.com/). Clone/download/fork the project as your base for starting with electron & mentioned technologies. Or cherry pick. And if you have any advice, or issues - please let me know: ys@delegate-it.be. Below is your README 'Menu':
+* [Get Started](#get-started)
+  * Getting your environment ready and the commands to use.
+* [Dependencies](#dependencies)
+  * Talking Gulp, Less, FontAwesome.
+* [IDE Choices (VSCode)](#ide-choice-vscode)
+* [Using the project](#using-the-project)
+  * About the pre-built classes and configurations.
+
+<br/>
+---
 
 # Get Started
 1. Make sure you have installed NodeJS and NPM globally on your machine. You can get it at [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
@@ -28,9 +38,9 @@ This is a highly opinionated [electron](https://electron.atom.io) boilerplate / 
 ## Run / Development NPM Commands
 Commands are specified in `package.json`'s `scripts` section. They allow to start & run the application without havin to manually run each gulp, electron-builder, or any other task.
 - `npm start` will start the application in production-mode. Behind the covers it actually calls the `prod` script (`npm run prod`).
-- `npm dev` will start the application in development-mode.
-- `npm prod` will start the application in production-mode.
-- `npm startelectron` will start electron with the given startup-path `./app/main(.js)`. You'll actually don't actually need it that often, it's there for reuse and the occasional debugging/trying out in the compiled version.
+- `npm run dev` will start the application in development-mode.
+- `npm run prod` will start the application in production-mode.
+- `npm run startelectron` will start electron with the given startup-path `./app/main(.js)`. You'll actually don't actually need it that often, it's there for reuse and the occasional debugging/trying out in the compiled version.
 
 ## Gulp Build Options
 Whenever running gulp you can specify some commands. Usually you'll use the npm commands specified above, but if needed you can add new scripts using the gulp-parameters below.
@@ -38,6 +48,9 @@ Whenever running gulp you can specify some commands. Usually you'll use the npm 
 - `--prod` will signal the application it is being compiled for production. You can base your code upon this flag to show/hide certain features.
 - `--obfuscate` will **turn off** obfuscation (as default it is on) of the typescript code as done by [javascript-obfuscator](https://www.npmjs.com/package/gulp-javascript-obfuscator).
 - `--uglify` will **turn off** minifaction of javascript as done by [UfligyJS](https://www.npmjs.com/package/gulp-uglify).
+
+<br/>
+---
 
 # Dependencies
 We've chosen a few dependencies we like working with, but for the most part they're interchangable with alternatives out there.
@@ -66,6 +79,7 @@ Autoprefixing is enabled via [gulp-autoprefixer](https://www.npmjs.com/package/g
 ## FontAwesome
 [Font Awesome](http://fontawesome.io/) because it's a free, high-quality tool for integrating icons inside your html. It's provied by default in `package.json` and in the build procedure of `gulp`.
 
+<br/>
 ---
 
 # IDE Choice: VSCode
@@ -75,9 +89,10 @@ This template uses some [plugins for VSCode](https://marketplace.visualstudio.co
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons) as it provides clear icons in the file explorer window
 - [psioniq File Header Generator](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header) as it easily integrates auto generated top-header comments for files
 
+<br/>
 ---
 
-# Start project
+# Using the project
 ## Config Object
 The config object is there for your needs. It is set up to be a singleton. It reads it's information from the `./app/data/config.json` file that is being compiled using the gulp task `copy:cofig:configjson`. The base of the file is stored in `./src/data/config.json`. Feel free to **add** sections to it, but **do not delete** the sections *app, build, env, paths or flags* as the gulp task and the `Config` class rely on them being there.
 ### Getting info from config.json with Config object
