@@ -18,8 +18,9 @@ const config = require('./gulp/tools/gulp.config')(args);
 const plugins = require('./gulp/tools/gulp.plugins')(config);
 const tasks = require('gulp-require-tasks')({
     path: path.join(__dirname, 'gulp', 'tasks'),
+    passCallback: true,
     seperator: ':',
-    arguments: [config, plugins]
+    arguments: [plugins]
 });
 /*------------------------------------------------------------------------------------*/
 /*///*/

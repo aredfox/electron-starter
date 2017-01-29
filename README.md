@@ -39,7 +39,7 @@ Below is an outline of a task's structure:
 ```
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {        
+    fn: function (gulp, plugins, callback) {        
             plugins.util.log('You can log messages as well with gulp-util, accessible via plugins.util.');
             return 
                 gulp.src(...)
@@ -48,6 +48,7 @@ module.exports = {
     }
 };
 ```
+Note that whenever a task doesn't return a stream, it must call the callback function.
 
 ## Less
 I've chosen [less](http://lesscss.org/), but you could easily replace it with sass if you chose to do so. The task gulp task "css:less" will compile all "*.less" files and bundle them into one "stylesheet.css.min" file in the output "app/views/styles" folder.

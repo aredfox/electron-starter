@@ -9,7 +9,7 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {
+    fn: function (gulp, plugins, callback) {
         return gulp
             .src(plugins.config.paths.packagejson)
             .pipe(plugins.jsonEditor(file => {

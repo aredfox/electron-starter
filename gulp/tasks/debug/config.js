@@ -8,7 +8,8 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {        
-        plugins.util.log(`Configuration object: ${JSON.stringify(plugins.config, null, ' ')}.`);
+    fn: function (gulp, plugins, callback) {
+        plugins.util.log(`Configuration object: ${JSON.stringify(plugins.config, null, ' ')}.`);        
+        callback();
     }
 };

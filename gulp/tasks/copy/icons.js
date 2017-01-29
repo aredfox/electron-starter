@@ -8,7 +8,7 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {
+    fn: function (gulp, plugins, callback) {
         return gulp
             .src(plugins.config.paths.build.icons.source)
             .pipe(gulp.dest(plugins.config.paths.build.icons.destination));

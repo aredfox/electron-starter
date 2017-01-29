@@ -9,7 +9,7 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {
+    fn: function (gulp, plugins, callback) {
         const tsconfig = plugins.config.paths.tsconfigjson;
         const tsProject = plugins.typescript.createProject(tsconfig);
         const dest = plugins.config.paths.destination.base;

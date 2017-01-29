@@ -7,7 +7,14 @@
 // Task that runs the build cycle.
 
 module.exports = {
-    dep: ['debug', 'clean', 'copy', 'css:less', 'js:typescript'],
-    fn: function (gulp, callback, plugins) {                
+    dep: [],
+    fn: function (gulp, plugins, callback) {
+        plugins.runSequence(
+            'clean',
+            'copy',
+            'css:less',
+            'js:typescript',
+            callback
+        );
     }
 };

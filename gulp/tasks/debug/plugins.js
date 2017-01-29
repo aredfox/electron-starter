@@ -8,7 +8,8 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {        
+    fn: function (gulp, plugins, callback) {        
         plugins.util.log(`Loaded plugins: ${Object.keys(plugins).join(', ')}.`);
+        callback();
     }
 };

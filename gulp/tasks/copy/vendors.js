@@ -9,10 +9,12 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {
+    fn: function (gulp, plugins, callback) {
         for(let vendor of plugins.config.paths.source.vendors) {
+            plugins.util.log(`Copying vendor '${vendor.name}'.`);
             gulp.src(vendor.glob)
                 .pipe(gulp.dest(`${plugins.config.paths.destination.vendor}/${vendor.name}`))
         }
+        callback();
     }
 };

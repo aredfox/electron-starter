@@ -9,9 +9,10 @@
 
 module.exports = {
     dep: [],
-    fn: function (gulp, callback, plugins) {        
-        return plugins.del([
+    fn: function (gulp, plugins, callback) {
+        plugins.del([
             plugins.config.paths.destination.base
         ]);
+        callback();
     }
 };
