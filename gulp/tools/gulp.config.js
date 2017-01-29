@@ -31,7 +31,7 @@ module.exports = args => {
         // Paths
         paths: {            
             base: path.resolve("./"),
-            packagejson: path.resolve("./package.json"),
+            packagejson: path.resolve("./package.json"),            
             tsconfigjson: path.resolve("./tsconfig.json"),            
             build: {
                     icons: { 
@@ -40,7 +40,8 @@ module.exports = args => {
                     }
             },
             source: {
-                base: path.resolve("./src"),                
+                base: path.resolve("./src"),            
+                configjson: path.resolve("./src/data/config.json"),    
                 typescript: path.join(path.resolve("./src/"), "**", "/*.ts"),
                 less: path.join(path.resolve('./src/'), '**', '/*.less'),
                 html: path.join(path.resolve('./src/'), '**', '*.{html,htm}'),
@@ -54,6 +55,7 @@ module.exports = args => {
             },            
             destination: {                
                 base: path.resolve("./app"),
+                data: path.resolve("./app/data"),
                 views: path.resolve("./app/views/"),
                 styles: path.resolve("./app/views/styles"),
                 lib: path.resolve("./app/lib"),

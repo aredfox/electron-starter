@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ./app/main"
   },
-  "author": "Yves Schelpe (yves.schelpe@kdg.be)",
+  "author": "Yves Schelpe (ys@delegate-it.be)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "appId": "electron-starter",
     "productName": "electron-starter",
     "category": "public.app-category.education",
-    "copyright": "Copyright © {year} Delegate-IT.be",
+    "copyright": "Copyright © Delegate-IT.be",
     "mac": {
       "category": "public.app-category.education",
       "icon": "src/data/build/icon.icns"
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "dot-object": "^1.5.4",
+    "moment": "^2.17.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

@@ -1,0 +1,10 @@
+{
+	"app": {},
+    "build": {},
+    "env": {},	
+	"paths": {},
+    "flags": {
+        "canShowConsole": true,
+	    "showConsoleOnStartup": false
+    }	
+}

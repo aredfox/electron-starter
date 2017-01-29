@@ -13,7 +13,7 @@ module.exports = {
         return gulp
             .src(plugins.config.paths.packagejson)
             .pipe(plugins.jsonEditor(file => {
-                file.main = "main";
+                file.main = "main";                
                 delete file.scripts;
                 delete file.devDependencies;
                 delete file.build;

@@ -24,7 +24,11 @@ module.exports = config => {
 function addPlugins(plugins) {
     plugins.del = require('del');
     plugins.path = require('path');
+    plugins.fs = require('fs');
+    plugins.dot = require('dot-object');
     plugins.runSequence = require('run-sequence');
+    plugins.moment = require('moment');
+    plugins.childProcess = require('child_process');
     return plugins;
 }
 /*------------------------------------------------------------------------------------*/
