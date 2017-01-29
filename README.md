@@ -7,9 +7,9 @@ This is a highly opinionated [electron](https://electron.atom.io) boilerplate / 
 * [IDE Choices (VSCode)](#ide-choice-vscode)
 * [Using the project](#using-the-project)
   * About the pre-built classes and configurations.
+* [Known Issues](#known-issues)
 
-<br/>
----
+<br/><br/>
 
 # Get Started
 1. Make sure you have installed NodeJS and NPM globally on your machine. You can get it at [https://nodejs.org/en/download/](https://nodejs.org/en/download/).
@@ -49,8 +49,7 @@ Whenever running gulp you can specify some commands. Usually you'll use the npm 
 - `--obfuscate` will **turn off** obfuscation (as default it is on) of the typescript code as done by [javascript-obfuscator](https://www.npmjs.com/package/gulp-javascript-obfuscator).
 - `--uglify` will **turn off** minifaction of javascript as done by [UfligyJS](https://www.npmjs.com/package/gulp-uglify).
 
-<br/>
----
+<br/><br/>
 
 # Dependencies
 We've chosen a few dependencies we like working with, but for the most part they're interchangable with alternatives out there.
@@ -79,8 +78,7 @@ Autoprefixing is enabled via [gulp-autoprefixer](https://www.npmjs.com/package/g
 ## FontAwesome
 [Font Awesome](http://fontawesome.io/) because it's a free, high-quality tool for integrating icons inside your html. It's provied by default in `package.json` and in the build procedure of `gulp`.
 
-<br/>
----
+<br/><br/>
 
 # IDE Choice: VSCode
 However it's possible to run this starter-kit / boilerplate without the use of [VSCode](https://code.visualstudio.com/), I've chosen this as my editor of choice due to the native typescript support and it's wide availibilty on platforms. It's a personal preference, choose whatever IDE that makes you happy.
@@ -89,8 +87,7 @@ This template uses some [plugins for VSCode](https://marketplace.visualstudio.co
 - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons) as it provides clear icons in the file explorer window
 - [psioniq File Header Generator](https://marketplace.visualstudio.com/items?itemName=psioniq.psi-header) as it easily integrates auto generated top-header comments for files
 
-<br/>
----
+<br/><br/>
 
 # Using the project
 ## Config Object
@@ -139,3 +136,12 @@ To see what's inside, here's an example output for the config.json file
    }
 }
 ```
+
+<br/><br/>
+
+# Known Issues
+## @types/dot-object "return type void"
+The current @typings/dot-object version has a method signature return `:void` for the method `pick`, you have to manually change this to `:any` until the issue is resolved. There's currently a [pull request](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/14320) for this on [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/pull/14320). Feel free to go there to see the details.<br/>
+**Workaround:** 
+* after `npm install` go to the folder `node_modules/@types/dot-object/index.d.ts`
+* change line 112 from `pick(path: string, obj: any, remove?: boolean): void;` to `pick(path: string, obj: any, remove?: boolean): any;`
