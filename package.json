@@ -4,8 +4,10 @@
   "description": "Opinionated electron.atom.io boilerplate / template.",
   "main": "./app/main",
   "scripts": {
-    "start": "electron ./app/main",
-    "dev": "gulp clean && gulp build --dev && electron ./app/main"
+    "start": "npm run prod",
+    "startelectron": "electron ./app/main",
+    "dev": "gulp clean && gulp build --dev && npm run startelectron",
+    "prod": "gulp clean && gulp build --prod && npm run startelectron"
   },
   "author": "Yves Schelpe (ys@delegate-it.be)",
   "license": "MIT",
