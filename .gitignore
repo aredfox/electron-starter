@@ -32,7 +32,7 @@ coverage
 /build/
 /dist/
 /app/
-/src/data/resources/build/icon.*
+/src/data/build/icon.*
 
 # Dependency directories
 node_modules
