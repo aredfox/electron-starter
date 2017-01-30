@@ -5,6 +5,6 @@
 	"paths": {},
     "flags": {
         "canShowConsole": true,
-	    "showConsoleOnStartup": false
+	    "canShowConsoleOnStartup": true
     }	
 }

@@ -70,6 +70,8 @@ module.exports = {
                 file.build.timestamp = buildTimeStamp.format();
                 file.build.number = buildTimeStamp.format(buildNumberFormat);                
                 file.build.repository = getRepositorySection();
+                // Flags
+                file.flags.canShowConsoleOnStartup = plugins.config.env.isDev;
                 // Log output config.json
                 plugins.util.log(`Outputting config.json: ${JSON.stringify(file)}`);
                 // Return the config.json                

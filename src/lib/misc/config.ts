@@ -28,6 +28,9 @@ export interface IConfig {
     isProd: () => boolean
     // App
     getVersion: (format: VersionStringFormat) => string;
+    // Flags
+    canShowConsole: boolean,
+    canShowConsoleOnStartup: boolean
 }
 /*------------------------------------------------------------------------------------*/
 /*///*/
@@ -48,24 +51,20 @@ export default class Config implements IConfig {
     private _versions: string[] = undefined;
 
     /* Construction */    
-    constructor(configjsonString: string) {
-        //console.log(`[CFG]-[ctor] Reading configJsonString...`);
-        //console.log(`[CFG]-[ctor] JSON data: '${configjsonString}'`);
+    constructor(configjsonString: string) {        
         this._configjson = JSON.parse(configjsonString);                
     }
 
     /* Public functions */    
     // Checks whether the key exists
-    hasKey(key: string): boolean {
-        //console.log(`[CFG]-[hasKey:${key}]`);
+    hasKey(key: string): boolean {        
         if(this._configjson === undefined) {
             return false;
         }
         return dot.pick(key, this._configjson) !== undefined;
     }
     // Gets the value of the key, or returns the key-path itself
-    get(key: string): string {
-        //console.log(`[CFG]-[get:${key}]`);
+    get(key: string): string {        
         if(this.hasKey(key)) {
             return dot.pick(key, this._configjson, false).toString();            
         }
@@ -96,6 +95,14 @@ export default class Config implements IConfig {
             this._versions.push(`${this._versions[2]}.${this.get('env.id')}`);
         }
         return this._versions[format];
+    }
+    // - Flags
+    get canShowConsole(): boolean {
+        return this.get('flags.canShowConsole') === 'true';
+    }
+    get canShowConsoleOnStartup(): boolean {
+        if(!this.canShowConsole) return false;
+        return this.get('flags.canShowConsoleOnStartup') === 'true';
     }
 }
 /*------------------------------------------------------------------------------------*/

@@ -11,6 +11,7 @@
 import * as path from 'path';
 import * as url from 'url';
 import electron, { BrowserWindow } from 'electron';
+import Config from './lib/misc/config';
 /*------------------------------------------------------------------------------------*/
 /*///*/
 
@@ -50,7 +51,9 @@ export default class App {
                         slashes: true
                     })
                 );
-                App.mainWindow.webContents.openDevTools();
+                if(Config.Instance.canShowConsoleOnStartup) {
+                    App.mainWindow.webContents.openDevTools();
+                }
             }
         );
     }
