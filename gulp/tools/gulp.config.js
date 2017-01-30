@@ -50,6 +50,11 @@ module.exports = args => {
                         name: 'font-awesome',
                         path: path.resolve('./node_modules/font-awesome'),
                         glob: path.resolve('./node_modules/font-awesome/**/*{.min.css,otf,eot,svg,ttf,woff,woff2}')                        
+                    },
+                    {
+                        name: 'material-design-lite',
+                        path: path.resolve('./node_modules/material-design-lite'),
+                        glob: path.resolve('./node_modules/material-design-lite/**/*.*')
                     }
                 ]
             },            
