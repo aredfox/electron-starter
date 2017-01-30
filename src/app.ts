@@ -10,7 +10,7 @@
 /** IMPORTS **/
 import * as path from 'path';
 import * as url from 'url';
-import electron, { BrowserWindow } from 'electron';
+import electron, { BrowserWindow, shell } from 'electron';
 import Config from './lib/misc/config';
 /*------------------------------------------------------------------------------------*/
 /*///*/
@@ -68,10 +68,23 @@ export default class App {
             }
         });
 
+        // Once the main browser window is ready, show it
         mainBrowserWindow.once(
             'ready-to-show',
             () => {
                 App.mainWindow.show();
+            }
+        );
+
+        // Open a-href-links in new external (native) browser window.
+        mainBrowserWindow.webContents.on(
+            'will-navigate', 
+            (e, url) => {
+                if(url !== mainBrowserWindow.webContents.getURL()) { 
+                    // if the url isn't the page we are on, we'll open it in the native browser
+                    e.preventDefault();
+                    shell.openExternal(url);
+                }
             }
         );
 
