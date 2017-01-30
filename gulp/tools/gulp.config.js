@@ -55,6 +55,11 @@ module.exports = args => {
                         name: 'material-design-lite',
                         path: path.resolve('./node_modules/material-design-lite'),
                         glob: path.resolve('./node_modules/material-design-lite/**/*.*')
+                    },
+                    {
+                        name: 'roboto-font',
+                        path: path.resolve('./node_modules/roboto-npm-webfont'),
+                        glob: path.resolve('./node_modules/roboto-npm-webfont/**/*{.css,.min.css,otf,eot,svg,ttf,woff,woff2}')
                     }
                 ]
             },            

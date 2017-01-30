@@ -25,7 +25,7 @@ export default class AppContainer extends React.Component<{}, {}> {
                         <h2 className="mdl-card__title-text">Electron-Starter</h2>
                     </div>
                     <div className="mdl-card__supporting-text">
-                        <p>Running electron-starter version '{Config.Instance.getVersion()}'.</p>
+                        Running electron-starter version '{Config.Instance.getVersion()}'.
                     </div>
                     <div className="mdl-card__actions mdl-card--border">
                         <a className="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
