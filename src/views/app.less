@@ -1,14 +1,22 @@
 body {
     font-family: "Roboto";
-    background-color: #addbe2;
+    background-color: #eee;
+    height: 100%;
+    user-select: none;
 }
 
-.appcontainer-intro-card-square {
+#welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .appcontainer-intro-card-square {
     width: 320px;
     height: 320px;
-}
-.appcontainer-intro-card-square > .mdl-card__title {
-  color: #fff;
-  background: #333;
-    //url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+    }
+    .appcontainer-intro-card-square > .mdl-card__title {
+    color: #fff;
+    background: url('../../data/images/electron_starter_backdrop.png') no-repeat #333;
+    }
 }

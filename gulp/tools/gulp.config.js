@@ -45,6 +45,7 @@ module.exports = args => {
                 typescript: path.join(path.resolve("./src/"), "**", "/*.ts"),
                 less: path.join(path.resolve('./src/'), '**', '/*.less'),
                 html: path.join(path.resolve('./src/'), '**', '*.{html,htm}'),
+                images: path.join(path.resolve('./src/data/images/**/*')),
                 vendors: [
                     {
                         name: 'font-awesome',
@@ -66,6 +67,7 @@ module.exports = args => {
             destination: {                
                 base: path.resolve("./app"),
                 data: path.resolve("./app/data"),
+                images: path.resolve("./app/data/images"),
                 views: path.resolve("./app/views/"),
                 styles: path.resolve("./app/views/styles"),
                 lib: path.resolve("./app/lib"),

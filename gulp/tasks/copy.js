@@ -7,5 +7,5 @@
 // Task that runs the full copy cycle.
 
 module.exports = {
-    dep: ['copy:html', 'copy:icons', 'copy:vendors', 'copy:config:packagejson', 'copy:config:configjson']
+    dep: ['copy:html', 'copy:images', 'copy:icons', 'copy:vendors', 'copy:config:packagejson', 'copy:config:configjson']
 };
